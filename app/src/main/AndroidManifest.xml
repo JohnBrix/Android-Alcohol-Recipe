@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.alcoholic.alcoholic_ingredients">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/launcher_alcoholic_ingredients"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/launcher_alcoholic_ingredients"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="com.alcoholic.alcoholic_ingredients.controller.DashboardController" />
+        <activity
+            android:parentActivityName="com.alcoholic.alcoholic_ingredients.controller.DashboardController"
+            android:name="com.alcoholic.alcoholic_ingredients.controller.OrdinaryDrinkController"/>
+        <activity
+            android:parentActivityName="com.alcoholic.alcoholic_ingredients.controller.DashboardController"
+            android:name="com.alcoholic.alcoholic_ingredients.controller.CocktailController"/>
+        <activity
+            android:parentActivityName="com.alcoholic.alcoholic_ingredients.controller.DashboardController"
+            android:name="com.alcoholic.alcoholic_ingredients.controller.NonAlcoholicController"/>
+
+        <activity
+            android:parentActivityName="com.alcoholic.alcoholic_ingredients.controller.OrdinaryDrinkController"
+            android:name="com.alcoholic.alcoholic_ingredients.controller.OrdinaryDrinkDescription"/>
+        <activity android:name="com.alcoholic.alcoholic_ingredients.controller.CocktailDescription"/>
+        <activity android:name="com.alcoholic.alcoholic_ingredients.controller.NonAlcoholicDescription"/>
+
+        <activity android:name="com.alcoholic.alcoholic_ingredients.controller.MainActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
